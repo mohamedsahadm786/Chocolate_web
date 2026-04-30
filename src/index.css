@@ -1,0 +1,48 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,300;9..144,0,400;9..144,0,500;9..144,1,300;9..144,1,400;9..144,1,500&family=Inter:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --noir: #0a0604;
+  --cocoa: #1a0e0a;
+  --cocoa-soft: #2a1a12;
+  --cocoa-warm: #3d2418;
+  --gold: #c9a961;
+  --gold-bright: #e8c878;
+  --gold-deep: #8a6f3d;
+  --cream: #f5ead4;
+  --cream-mute: #a89880;
+  --rose-dust: #c9a89a;
+  --plum-dust: #6b4a5e;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--cocoa);
+  color: var(--cream);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--cocoa);
+  color: var(--cream);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Hide default cursor everywhere */
+* { cursor: none !important; }
+
+@layer utilities {
+  .font-display { font-family: 'Fraunces', serif; }
+  .font-sans    { font-family: 'Clash Display', sans-serif; }
+  .font-body    { font-family: 'Inter', sans-serif; }
+}
